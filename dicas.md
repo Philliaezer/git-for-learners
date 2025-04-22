@@ -27,7 +27,7 @@ git config --global credential.helper store
 <details>
 <summary>Aviso de segurança</summary>
 
-
+...
 > [!CAUTION]
 > A configuração `credential.helper store` torna mais fácil sua vida, ao não precisar digitar o usuário e o Token toda vez que subir o código para o GitHub.
 >
