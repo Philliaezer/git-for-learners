@@ -24,13 +24,9 @@ git config --global user.email "meuemail@gmail.com"
 git config --global user.name "MeuUsuarioDoGitHub"
 git config --global credential.helper store
 ```
-<details>
-<summary>Aviso de segurança</summary>
 
-...
+A configuração `credential.helper store` torna mais fácil sua vida, ao não precisar digitar o usuário e o Token toda vez que subir o código para o GitHub.
 > [!CAUTION]
-> A configuração `credential.helper store` torna mais fácil sua vida, ao não precisar digitar o usuário e o Token toda vez que subir o código para o GitHub.
->
 > Mas atenção: O Token é armazenado em texto sem criptografia, o que pode ser um risco de segurança. Então, se tiver confiança na sua máquina, não se preocupe, mas tome cuidado!
 
 </details>
