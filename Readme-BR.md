@@ -1,11 +1,10 @@
-# Learning git
+# Aprendendo Git
 
-> Todo: Traduzir
+Neste repositório terá:
 
-In this repository will have:
-- Installable shellscripts and code/binaries commands to better handle git
-  - both for Windows/Linux (and Mac?) and for Android Termux (and iSH?)
-- Quick and adaptable tutorials for using Git (and so you can see that it's not as monstrous as you think...)
-  - Truly adaptable, really! Whether you are someone who urgently wants to know how Git works, or if you already have the knack, this will be the way to go :)
+- Shellscripts instaláveis ​​e comandos de código/executaveis binários para melhor lidar com o git (e futuramente GitHub/GitLab)
+    - tanto para Windows/Linux (e Mac?) quanto para Android Termux (e iSH?)
+- Tutoriais rápidos e adaptáveis ​​para usar o Git (e assim você pode ver que ele não é tão monstruoso quanto você pensa...)
+    - Realmente adaptável! Seja você alguém que quer saber urgentemente como o Git funciona ou alguém que já tem o dom, este é o caminho a seguir :)
 
-Stay tunned!
+Fiquem atentos!
