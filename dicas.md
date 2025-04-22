@@ -1,8 +1,11 @@
 # Comandos Git importantes
 ## Imprescindíveis:
 `git clone https://github.com/Maria/repo` - baixa o repositório “repo” do usuário “Maria”
+
 `git status` - status do repositório
+
 `git help core-tutorial` - tutorial do próprio Git
+
 `git log` - mostra todos os commits da branch atual
 <details>
 <summary>Outros comandos</summary>
@@ -29,7 +32,7 @@ git branch -M main
 ```
 
 ## Comandos remotos
-```
+```sh
 git remote add origin https://github.com/Philliaezer/git-for-learners.git
 git push -u origin main
     → digite seu username do GitHub/gitlab/Outro
@@ -57,7 +60,7 @@ Para criar um novo Pull Request, crie uma nova branch e faça git push  através
 ## Como copiar commits de uma branch pra outra:
 (Nesse caso, da branch-primaria para a branch-alvo)
 
-```
+```sh
 git checkout branch-alvo
 git log branch-primaria
 Pegue o hash (aquele monte de letras e números) do commit a ser copiado
@@ -70,7 +73,7 @@ git cherry-pick --continue
 
 ## Mergear dois repositórios (não apenas branches)
 
-```
+```sh
 cd path/to/project-a
 git checkout some-branch
 cd path/to/project-b
@@ -90,7 +93,7 @@ nano ~/gitconfig
 
 Daí é só usar:
 
-```
+```sh
 git save "meu commit"
 ```
 
@@ -124,6 +127,7 @@ Exemplo:
 https://api.github.com/repos/Philliaezer/git-for-learners
 
 >If you own the repository, you can find the exact size by opening your Account Settings → Repositories (https://github.com/settings/repositories), and the repository size is displayed next to its designation.
+>
 > **If you do not own the repository, you can fork it and then check the in the same place.**
 </details>
 
@@ -133,14 +137,17 @@ git-bisect - Use binary search to find the commit that introduced a bug
 
 SYNOPSIS
 
-git bisect <subcommand> <options>
+`git bisect <subcommand> <options>`
 </details>
 
 <details>
 <summary>Enviar repositório por CD/Email/Bluetooth</summary>
-#### Para empacotar:
+
+**Para empacotar:**
+
 `git bundle create repo.bundle master` -> Empacota o respositorio em um arquivo. Util para mandar o repositório via bluetooth 
 
-#### Para desempacotar:
+**Para desempacotar:**
+
 `git clone repo.bundle <new directory>` -> na verdade, é esse, Desempacota o repositório de um arquivo.
 </details>
