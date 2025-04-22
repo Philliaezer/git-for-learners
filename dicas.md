@@ -64,8 +64,10 @@ git push -u origin main
 6. `git push origin contribuindo`
 7. No GitHub, vá em “Compare & Pull Request”, faça as alterações, dê uma descrição e pronto!
 
-**Nota:** Você só pode fazer 1 pull request por branch. 
-Para criar um novo Pull Request, crie uma nova branch e faça git push  através dela
+> [!NOTE]
+> Você só pode fazer 1 pull request por branch. 
+> 
+> Para criar um novo Pull Request, crie uma nova branch e faça `git push` através dela
 
 **Dica:** você pode fazer pull Request no seu próprio repositório pelo Git!
 
