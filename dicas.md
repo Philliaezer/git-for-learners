@@ -42,6 +42,8 @@ git push -u origin main
     → digite seu username do GitHub/gitlab/Outro
     → Digite seu token
 ```
+> [!WARNING]
+> Não use a sua senha do GitHub, mas o seu Token (crie um nas configurações do seu usuário
 
 ## Como criar um token?
 > A criar
