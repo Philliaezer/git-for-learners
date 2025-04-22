@@ -9,9 +9,13 @@
 `git log` - mostra todos os commits da branch atual
 <details>
 <summary>Outros comandos</summary>
+
 `git commit --allow-empty -m 'your message'⁠` - faz commit sem alterações.
+
 `git for-each-repo --config=repo <comando>` - roda comando git para uma lista de repositórios
+
 `git branch` - Para ver todas as branches (a branch atual está com um * no inicio do nome)
+
 </details>
 
 ## Configurações iniciais obrigatórias:
