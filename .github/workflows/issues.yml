@@ -34,7 +34,7 @@ jobs:
           echo issue
           echo issue issue
       - name: First interaction
-        uses: actions/first-interaction@v1.0.0
+      - uses: actions/first-interaction@v1.0.0
         with:
           # Token for the repo. Can be passed in using {{ secrets.GITHUB_TOKEN }}
           repo-token: o
