@@ -128,6 +128,18 @@ Or:
 
 `git push -f origin HEAD^:master`
 
+## Delete an whole branch
+`git branch -d branch-name`
+
+## Deleted on the origin (GitHub/gitlab...) repository 
+`git push origin --delete branch-name`
+
+## How to recover an deleted commit
+> If you commited a deleted branch, you can recover that too!
+git reflog --no-abbrev
+>> See the SHA-1 hash (that bunch of numbers and some letters) of the commit you wanna recover
+git checkout <type here the SHA-1 hash>
+
 ## Others:
 
 <details>
@@ -155,7 +167,7 @@ SYNOPSIS
 </details>
 
 <details>
-<summary>Enviar repositório por CD/Email/Bluetooth</summary>
+<summary>Send repository via CD/Email/Bluetooth</summary>
 
 **To pack/bundle:**
 
@@ -166,3 +178,45 @@ SYNOPSIS
 `git clone repo.bundle <new directory>` -> actually, it's this one, Unpack the repository from a file.
 </details>
 
+<details><summary>Bring files/folders from one branch to another</summary>
+
+**To remove on the branch main**
+
+First, checkout on the branch you want to remove those files or folders
+
+```sh
+$ git checkout main
+```
+
+And then remove the folders normally, and then commit the changes
+```sh
+$ git rm -r folder folder2 file.txt
+
+$ git commit -m "Remove folders and files that will be moved to dev"
+```
+
+**To add on the branch dev**
+
+Switch to dev branch, and there just restore that deleted commit
+
+```sh
+$ git checkout dev
+
+$ git checkout main~1 -- folder folder2 file.txt
+```
+
+and then push both branches
+
+```sh
+$ git add .
+
+$ git commit -m "Add folders and files that was removed from main"
+
+$ git push origin dev
+
+$ git checkout main
+
+$ git push origin main
+```
+
+</details>
