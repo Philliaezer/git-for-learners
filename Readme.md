@@ -5,7 +5,9 @@
 
 **Note:** This repo is available in Portuguese too! [Click Here](https://github.com/Philliaezer/git-for-learners/blob/main/dicas.md)
 
-And if you have ideas or just want to ask for fixes, please open an _issue_ on this repository.
+Para mais dicas, veja no repositório [Padrões de Commits](https://github.com/iuricode/padroes-de-commits) do IuriCode
+
+And if you have ideas or just want to ask for fixes, please open an _issue_ here, on this repository.
 </div>
 
 ---
