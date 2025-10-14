@@ -1,3 +1,18 @@
+<diV align="center">
+
+#  <img src=https://git-scm.com/images/logo@2x.png height="70" align="center"> &nbsp;for Learners
+## Quer aprender GIT? Então siga este guia rápido.
+
+**Nota:** Este repositório também está disponível em inglês! [Click Here](https://github.com/Philliaezer/git-for-learners/blob/main/readme.md)
+
+Para mais dicas, veja no repositório [Padrões de Commits](https://github.com/iuricode/padroes-de-commits) do IuriCode
+
+E se você tiver ideias ou apenas quiser pedir correções, abra uma issue aqui, neste repositório.
+</div>
+
+---
+
+
 # Comandos Git importantes
 ## Imprescindíveis:
 `git clone https://github.com/Maria/repo` - baixa o repositório “repo” do usuário “Maria”
@@ -6,23 +21,24 @@
 
 `git help core-tutorial` - tutorial do próprio Git
 
-`git log` - mostra todos os commits da branch atual
 <details>
 <summary>Outros comandos</summary>
+`git branch` - Para ver todas as branches (a branch atual está com um * no inicio do nome)
+
+`git log` - mostra todos os commits da branch atual
 
 `git commit --allow-empty -m 'your message'⁠` - faz commit sem alterações.
 
 `git for-each-repo --config=repo <comando>` - roda comando git para uma lista de repositórios
 
-`git branch` - Para ver todas as branches (a branch atual está com um * no inicio do nome)
 
 </details>
 
 ## Configurações iniciais obrigatórias:
 ```sh
-git config --global user.email "meuemail@gmail.com"
-git config --global user.name "MeuUsuarioDoGitHub"
-git config --global credential.helper store
+$ git config --global user.email "meuemail@gmail.com"
+$ git config --global user.name "MeuUsuarioDoGitHub"
+$ git config --global credential.helper store
 ```
 
 A configuração `credential.helper store` torna mais fácil sua vida, ao não precisar digitar o usuário e o Token toda vez que subir o código para o GitHub.
@@ -43,8 +59,8 @@ git branch -M main
 
 ## Comandos remotos
 ```sh
-git remote add origin https://github.com/Philliaezer/git-for-learners.git
-git push -u origin main
+$ git remote add origin https://github.com/Philliaezer/git-for-learners.git
+$ git push -u origin main
     → digite seu username do GitHub/gitlab/Outro
     → Digite seu token
 ```
@@ -52,13 +68,47 @@ git push -u origin main
 > Não use a sua senha do GitHub, mas o seu Token (crie um nas configurações do seu usuário
 
 ## Como criar um token?
-> A criar
+<details><summary>Clique aqui</summary>
+
+1. Acesse github.com
+e faça login.
+2. Clique na sua foto de perfil (canto superior direito) → Configurações
+
+3. Na barra lateral esquerda, role para baixo e clique em Configurações do desenvolvedor
+
+4. Clique em Tokens de acesso pessoal e, em seguida, em Tokens (clássico).
+
+5. Clique em Gerar novo token → Gerar novo token (clássico).
+
+6. Preencha as informações do token:
+
+7. Observação: dê um nome ao seu token (por exemplo, "Meu Token Git").
+
+8. Expiração: escolha por quanto tempo será válido (por exemplo, 30 dias)
+
+9. Escopos (permissões): Verifique, pelo menos:
+
+    - repo → Acesso total aos seus repositórios
+
+    - read:org → Acesso de leitura para organizações 
+10. Clique em Gerar token
+
+11. Copie o token e salve-o!
+
+
+**Nota:** Você só verá esse token uma vez. Se você perdê-lo, precisará criar outro.
+
+**Cuidado:** Nunca compartilhe seu token. Não o coloque em nenhum código público.
+
+Para usá-lo com o Git, cole-o quando o Git solicitar sua senha durante o `git push`, `git pull`, etc.
+</div>
+</details>
 
 ## Para fazer pull request
 1. Faça um fork do projeto a ser contribuído
 2. `git clone https://github.com/Philliaezer/git-for-learners.git`
 3. `git branch contribuindo` - para contribuir
-4. `git checkout contribuindo` - para mudar para a branc
+4. `git checkout contribuindo` - para mudar para a branch
     - Ou git checkout -m contribuindo
 5. `git add . & git commit -m “feat: Minha contribuição!”`
 6. `git push origin contribuindo`
