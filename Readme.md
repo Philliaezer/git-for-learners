@@ -1,3 +1,15 @@
+<diV align="center">
+
+#  <img src=https://git-scm.com/images/logo@2x.png height="70" align="center"> &nbsp;for Learners
+## Wanna learn GIT? Then follow this quick guide
+
+**Note:** This repo is available in Portuguese too! [Click Here](https://github.com/Philliaezer/git-for-learners/blob/main/dicas.md)
+
+And if you have ideas or just want to ask for fixes, please open an _issue_ on this repository.
+</div>
+
+---
+
 # Important Git Commands
 ## Essentials:
 `git clone https://github.com/Maria/repo` - download the repository “repo” from the user “Maria”
@@ -6,23 +18,26 @@
 
 `git help core-tutorial` - Git's official tutorial
 
-`git log` - show all commits of the current branch
 <details>
 <summary>Other commands</summary>
 
+`git branch` - To see all branches (the current branch has an * at the beginning of its name)
+
+`git log` - show all commits of the current branch
+
+Specials:
+
 `git commit --allow-empty -m 'your message'⁠` - commits without changes.
 
-`git for-each-repo --config=repo <comando>` - run git command for a list of repositories
-
-`git branch` - To see all branches (the current branch has an * at the beginning of its name)
+`git for-each-repo --config=repo <command>` - run git command for a list of repositories
 
 </details>
 
 ## Mandatory initial settings:
 ```sh
-git config --global user.email "myemail@gmail.com"
-git config --global user.name "MyGitHubUsernamr"
-git config --global credential.helper store
+$ git config --global user.email "myemail@gmail.com"
+$ git config --global user.name "MyGitHubUsername"
+$ git config --global credential.helper store
 ```
 
 The `credential.helper store` configuration makes your life easier by not having to type in your username and token every time you upload your code to GitHub.
@@ -35,7 +50,7 @@ The `credential.helper store` configuration makes your life easier by not having
 
 ```sh
 git init new-repository
-cd new-repository & echo oi > Readme.md
+cd new-repository & echo hi > Readme.md
 git add . & git status
 git commit -m “chore: first commit”
 git branch -M main
@@ -43,8 +58,8 @@ git branch -M main
 
 ## Remote commands
 ```sh
-git remote add origin https://github.com/Philliaezer/git-for-learners.git
-git push -u origin main
+$ git remote add origin https://github.com/Philliaezer/git-for-learners.git
+$ git push -u origin main
     → Enter your GitHub/Gitlab/Other username
     → Enter your token
 ```
@@ -52,7 +67,48 @@ git push -u origin main
 > Don't use your GitHub password, but your Token (create one in your user settings)
 
 ## How to create a token?
-> Todo: Create this section
+<details><summary>Click here</summary>
+
+
+1. Go to github.com
+ and log in.
+2. Click on your profile picture (top-right) → Settings
+
+3. In the left sidebar, scroll down and click Developer settings
+
+4. Click Personal access tokens, then Tokens (classic)
+
+5. Click Generate new token → Generate new token (classic)
+
+6. Fill in the token info:
+
+7. Note: Give your token a name (e.g., “My Git Token”)
+
+8. Expiration: Choose how long it will be valid (e.g., 30 days)
+
+9. Scopes (permissions): Check at least:
+
+    - repo → Full access to your repositories
+
+    - read:org → Read access to organizations (optional)
+
+    - workflow → If you use GitHub Actions
+
+    - Others only if you need them
+
+10. Click Generate token
+
+11. Copy the token and save it!
+
+
+
+**Note:** You will only see it once. If you lose it, you’ll need to create another one.
+
+**Caution:** Never share your token. Do not upload it to public code.
+
+To use it with Git, paste it when Git asks for your password during git push, git pull, etc.
+</div>
+</details>
 
 ## To make a pull request
 1. Fork the project to be contributed to
@@ -61,7 +117,7 @@ git push -u origin main
 4. `git checkout contributing` - to switch to the branch
     - Or git checkout -m contributing
 5. `git add . & git commit -m “feat: My contribution!”`
-6. `git push origin contributinh`
+6. `git push origin contributing`
 7. On GitHub, go to “Compare & Pull Request”, make the changes, give a description and that's it!
 
 > [!NOTE]
@@ -79,7 +135,9 @@ git checkout target-branch
 git log primary-branch
 Get the hash (that bunch of letters and numbers) of the commit to be copied
 git cherry-pick commit-hash
+```
 Or
+```sh
 git cherry-pick commit-hash 1 commit-hash2
 git add .
 git cherry-pick --continue
@@ -99,13 +157,18 @@ git remote remove project-a
 
 ## How to create aliases (nicknames for commands:
 
+Type in your terminal:
 ```sh
-nano ~/gitconfig
+$ nano ~/gitconfig
+```
+
+Then paste something like:
+```sh
 [aliases]
   save = commit -m
 ```
 
-Then just use:
+Then, you can just use:
 
 ```sh
 git save "my commit"
@@ -115,12 +178,14 @@ git save "my commit"
 
 `git reset HEAD~1`
 
-## Delete 5 bad commits
+## Delete the last 5 bad commits
 
 `git reset HEAD~5 `
 
 ## Delete the commit on GitHub as well
 Attention: ⁠Do not Git push normally!
+
+And be careful if there are contributors in your project, as they may have problems while trying to push changes
 
 `git push origin +mybranch --force`
 
@@ -136,9 +201,14 @@ Or:
 
 ## How to recover an deleted commit
 > If you commited a deleted branch, you can recover that too!
+
+```sh
 git reflog --no-abbrev
->> See the SHA-1 hash (that bunch of numbers and some letters) of the commit you wanna recover
-git checkout <type here the SHA-1 hash>
+```
+
+>> See the SHA-1 hash (that bunch of numbers and some letters) of the commit you wanna recover, and then
+
+`git checkout <type here the SHA-1 hash>`
 
 ## Others:
 
@@ -175,7 +245,7 @@ SYNOPSIS
 
 **To unbundle:**
 
-`git clone repo.bundle <new directory>` -> actually, it's this one, Unpack the repository from a file.
+`git clone repo.bundle <new directory>` -> Unpack the repository from a file.
 </details>
 
 <details><summary>Bring files/folders from one branch to another</summary>
