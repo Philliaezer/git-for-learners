@@ -1,4 +1,4 @@
-<diV align="center">
+<div align="center">
 
 #  <img src=https://git-scm.com/images/logo@2x.png height="70" align="center"> &nbsp;for Learners
 ## Wanna learn GIT? Then follow this quick guide
